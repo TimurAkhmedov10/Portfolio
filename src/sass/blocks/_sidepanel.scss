@@ -1,0 +1,62 @@
+.sidepanel {
+    position: fixed;
+    top: 20vh;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 430px;
+    z-index: 1;
+    mix-blend-mode: difference;
+
+
+    &__link {
+        transition: .5s ease-in-out;
+
+        &:hover {
+            transform: rotate(360deg) scale(1.5);
+        }
+
+      /*   &_tg {
+            &:hover {
+                svg path {
+                    fill: #2CA5E0;
+                }
+            }
+        }
+
+        &_vk {
+            &:hover {
+                svg path {
+                    fill: #45668e;
+                }
+            }
+        } */
+    }
+
+    &__divider {
+        width: 3px;
+        height: 100px;
+        background-color: #fff;
+    }
+
+    &__text {
+        height: 150px;
+        width: 25px;
+        color: #fff;
+
+        span {
+            display: block;
+            width: 150px;
+            font-weight: 700;
+            font-size: 17px;
+            transform: rotate(-90deg) translate(-39%, -255%);
+        }
+
+    }
+
+    &__link {
+        transform: rotate(-90deg);
+    }
+}

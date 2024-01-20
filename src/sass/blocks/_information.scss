@@ -1,0 +1,101 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 400px 570px;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px 70px;
+    grid-template-areas:
+        "photo info"
+        "photo skill";
+}
+
+.information {
+    min-height: 100vh;
+    padding: 120px 0;
+    background-color: $main-color;
+
+    &__photo {
+        grid-area: photo;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        grid-area: info;
+    }
+
+    &__name {
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+
+    &__text {
+        margin-top: 15px;
+    }
+
+    &__info-line {
+        width: 60px;
+        height: 3px;
+        background-color: #000;
+    }
+
+
+    &__subtitle {
+        position: relative;
+        padding-left: 14px;
+        z-index: 2;
+
+        span {
+            color: $main-color;
+        }
+
+        @include before_circle_black;
+    }
+
+    &__skill-grid {
+        grid-area: skill;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px 50px;
+        grid-template-areas:
+            "item item2"
+            "item3 .";
+    }
+
+    &__skill-item {
+        position: relative;
+        grid-area: item;
+    }
+
+    &__skill-item2 {
+        position: relative;
+        grid-area: item2;
+    }
+
+    &__skill-item3 {
+        position: relative;
+        grid-area: item3;
+    }
+
+    &__skill-text {
+        padding-left: 60px;
+        margin-top: 6px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 1;
+        top: 8px;
+        left: 18px;
+
+        &_mob {
+            top: 6px;
+            left: 24px;
+            transform: scale(1.15);
+        }
+    }
+}
