@@ -1,0 +1,118 @@
+/* .hamburger {
+    position: fixed;
+    align-items: flex-end;
+    top: 20px;
+    right: 30px;
+    height: 24px;
+    cursor: pointer;
+    mix-blend-mode: difference;
+
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: $main-color;
+    }
+
+    span.long {
+        width: 36px;
+    }
+} */
+
+.toggle-hamburger {
+    background-color: #000;
+    color: $second-color;
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    top: 20px;
+    right: 30px;
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    height: 90px;
+    font-size: 0;
+    text-indent: -9999px;
+    mix-blend-mode: difference;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    
+    transition: background 0.3s;
+}
+
+.toggle-hamburger:focus {
+    outline: none;
+}
+
+.toggle-hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 5px;
+    background: $second-color;
+}
+
+.toggle-hamburger span:before,
+.toggle-hamburger span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $second-color;
+    z-index: 10;
+    
+}
+
+.toggle-hamburger span:before {
+    top: -15px;
+}
+
+.toggle-hamburger span:after {
+    bottom: -15px;
+}
+
+.toggle-hamburger.toggle-hamburger__animx span {
+    transition: background 0s 0.3s;
+}
+
+.toggle-hamburger.toggle-hamburger__animx span:before,
+.toggle-hamburger.toggle-hamburger__animx span:after { 
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.toggle-hamburger.toggle-hamburger__animx span:before {
+    transition-property: top, transform;
+}
+
+.toggle-hamburger.toggle-hamburger__animx span:after {
+    transition-property: bottom, transform;
+}
+
+/* when menu open: */
+.toggle-hamburger.toggle-hamburger__animx.is-active span {
+    background: none;
+}
+
+.toggle-hamburger.toggle-hamburger__animx.is-active span:before,
+.toggle-hamburger.toggle-hamburger__animx.is-active span:after {
+    background-color: $second-color;
+    transition-delay: 0s, 0.3s;
+}
+
+.toggle-hamburger.toggle-hamburger__animx.is-active span:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.toggle-hamburger.toggle-hamburger__animx.is-active span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}

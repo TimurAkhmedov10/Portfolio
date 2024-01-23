@@ -1,0 +1,134 @@
+.resume {
+    height: 100vh;
+    padding: 60px 0;
+    background-color: #000;
+
+    &__title {
+        position: relative;
+        text-align: center;
+        color: #fff;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 32px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 8px;
+            border: 2px solid #fff;
+        }
+    }
+
+
+    &__subtitle {
+        text-align: center;
+        color: $main-color;
+    }
+
+    .divider {
+        margin: 10px auto 0 auto;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 145px;
+        margin-top: 60px;
+        padding: 0 65px
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            color: $main-color;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -9px;
+                transform: translateY(-50%);
+                width: 21px;
+                height: 21px;
+                background-color: rgba(255, 255, 255, 0);
+                border-radius: 5px;
+                border: 2px solid #ffffff; 
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 2px;
+                    height: calc(100% + 18px);
+                    position: absolute;
+                    top: -14px;
+                    left: 0;
+                    background-color: #fff;
+                }
+            }
+        }
+
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            top: 51px;
+            height: 2px;
+            width: 44px;
+            position: absolute;
+            background-color: #fff;
+        }
+        &-head {
+            position: relative;
+            padding: 30px 0 0 100px;
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            color: $second-color;
+        }
+        &-icon {
+            position: absolute;
+            top: 34px;
+            left: 32px;
+            
+            &:before {
+                content: "";
+                position: absolute;
+                left: 12px;
+                width: 37px;
+                height: 37px;
+                background-color: #ffffff00;
+                border-radius: 8px;
+                border: 2px solid #fff;   
+            }
+            svg {
+                position: absolute;
+                left: 20px;
+                top: 6px;
+            }
+            &_other {
+                svg {
+                    left: 18px;
+                    top: 7px;
+                }
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 3px;
+            color: #c0c0c0;
+        }
+        &-body {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}

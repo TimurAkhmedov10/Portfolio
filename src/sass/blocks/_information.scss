@@ -8,9 +8,10 @@
         "photo skill";
 }
 
+
 .information {
     min-height: 100vh;
-    padding: 120px 0;
+    padding: 120px 0 60px 0;
     background-color: $main-color;
 
     &__photo {
@@ -34,11 +35,7 @@
         margin-top: 15px;
     }
 
-    &__info-line {
-        width: 60px;
-        height: 3px;
-        background-color: #000;
-    }
+    
 
 
     &__subtitle {
@@ -53,38 +50,42 @@
         @include before_circle_black;
     }
 
-    &__skill-grid {
-        grid-area: skill;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 20px 50px;
-        grid-template-areas:
-            "item item2"
-            "item3 .";
+    &__skill {
+        &-grid {
+            grid-area: skill;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px 50px;
+            grid-template-areas:
+                "item item2"
+                "item3 .";
+        }
+    
+        &-item {
+            position: relative;
+            grid-area: item;
+        }
+    
+        &-item2 {
+            position: relative;
+            grid-area: item2;
+        }
+    
+        &-item3 {
+            position: relative;
+            grid-area: item3;
+        }
+    
+        &-text {
+            padding-left: 60px;
+            margin-top: 6px;
+            font-size: 15px;
+            font-weight: 500;
+        }
     }
 
-    &__skill-item {
-        position: relative;
-        grid-area: item;
-    }
-
-    &__skill-item2 {
-        position: relative;
-        grid-area: item2;
-    }
-
-    &__skill-item3 {
-        position: relative;
-        grid-area: item3;
-    }
-
-    &__skill-text {
-        padding-left: 60px;
-        margin-top: 6px;
-        font-size: 15px;
-        font-weight: 500;
-    }
+    
 
     &__icon {
         position: absolute;
@@ -93,9 +94,9 @@
         left: 18px;
 
         &_mob {
-            top: 6px;
+            top: 7px;
             left: 24px;
-            transform: scale(1.15);
+            transform: scale(1.13);
         }
     }
 }
