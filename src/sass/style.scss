@@ -19,6 +19,13 @@
     width: 60px;
     height: 3px;
     background-color: #000;
+    &_white {
+        margin: 10px auto 0 auto;
+        background-color: $main-color;
+    }
+    &_use {
+        margin: 10px auto 0 auto;
+    }
 }
 
 
@@ -30,3 +37,4 @@
 @import 'src/sass/blocks/menu';
 @import 'src/sass/blocks/resume';
 @import 'src/sass/blocks/hamburger';
+@import 'src/sass/blocks/use';

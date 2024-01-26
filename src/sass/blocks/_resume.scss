@@ -18,7 +18,7 @@
             height: 32px;
             background-color: rgba(255, 255, 255, 0);
             border-radius: 8px;
-            border: 2px solid #fff;
+            border: 3px solid #fff;
         }
     }
 
@@ -28,9 +28,6 @@
         color: $main-color;
     }
 
-    .divider {
-        margin: 10px auto 0 auto;
-    }
 
     &__wrapper {
         display: grid;
