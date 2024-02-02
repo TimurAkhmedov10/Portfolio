@@ -1,0 +1,53 @@
+.portfolio {
+    padding-top: 60px;
+    background-color: #000;
+
+    &__title {
+        position: relative;
+        text-align: center;
+        color: #fff;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 32px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 8px;
+            border: 3px solid #fff;
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+        color: $main-color;
+    }
+
+    &__wrapper {
+        display: grid;
+        gap: 7px;
+        margin-top: 60px;
+        grid-template: repeat(2, 280px) / repeat(4, 280px);
+        grid-auto-rows: 280px;
+    }
+
+    &__item {
+        transition: 0.2s ease-in-out;
+        filter: grayscale(70%);
+        border: 1px solid $main-color;
+
+        img {
+            width: 100%;
+            
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+            border: none;
+        }
+    }
+}
