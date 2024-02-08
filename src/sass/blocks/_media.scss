@@ -1,0 +1,223 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .sidepanel {
+        display: none;
+    }
+
+    .information {
+        .grid-container {
+            grid-template-columns: 400px 510px;
+            gap: 25px 40px;
+        }
+
+        &__skill-grid {
+            gap: 20px 30px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .title {
+
+        &_fz48 {
+            font-size: 41px;
+        }
+    }
+
+    .promo {
+        &__title {
+            line-height: 46px;
+            width: 450px;
+        }
+    }
+
+    .information {
+        &__name {
+            line-height: 50px;
+        }
+
+        &__text {
+            margin-top: 10px;
+        }
+
+        .grid-container {
+            grid-template-columns: 300px 390px;
+            grid-template-rows: 229px 205px;
+            gap: 10px 30px;
+        }
+
+        &__skill {
+            &-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                grid-template-areas:
+                    "item"
+                    "item2"
+                    "item3";
+            }
+
+            &-text {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .title {
+
+        &_fz48 {
+            font-size: 32px;
+        }
+    }
+
+    .promo {
+        &__title {
+            line-height: 39px;
+            width: 350px;
+        }
+    }
+
+    .information {
+        padding-top: 40px;
+
+        &__name {
+            line-height: 60px;
+        }
+
+        &__text {
+            margin-top: 15px;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 400px auto auto;
+            gap: 20px;
+            grid-template-areas:
+                "photo"
+                "info"
+                "skill";
+        }
+
+        &__skill {
+            &-grid {
+                gap: 20px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "item item2"
+                    "item3 .";
+            }
+        }
+
+        &__photo {
+            img {
+                height: 100%;
+                object-fit: cover
+            }
+
+            ;
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+
+    .title {
+
+        &_fz48 {
+            font-size: 24px;
+        }
+    }
+
+    .promo {
+        background: url('../img/main_bg.jpg') no-repeat 53%/cover;
+
+        &__btns {
+            margin-top: 30px;
+            justify-content: flex-start;
+        }
+
+        &__subtitle {
+            font-size: 13px;
+            padding-left: 12px;
+
+            &:before {
+                top: -18%;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__title {
+            line-height: 33px;
+            width: 247px;
+        }
+    }
+
+    .hamburger {
+        right: 20px;
+    }
+
+    .menu {
+        &__block {
+            width: 250px;
+            padding-left: 20px;
+        }
+    }
+
+    .btn {
+        margin: 0;
+
+        &_down {
+            margin-left: 7px;
+        }
+    }
+
+    .information {
+
+        &__subtitle {
+            margin-top: 30px;
+        }
+        &__name {
+            font-size: 33px;
+        }
+
+        &__skill {
+            &-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                grid-template-areas:
+                    "item"
+                    "item2"
+                    "item3";
+            }
+        }
+
+        .grid-container {
+            grid-template-rows: 340px auto auto;
+        }
+    }
+}

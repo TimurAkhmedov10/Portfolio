@@ -30,7 +30,7 @@
     margin: 0;
     padding: 0;
     width: 90px;
-    height: 90px;
+    height: 65px;
     font-size: 0;
     text-indent: -9999px;
     mix-blend-mode: difference;
@@ -50,10 +50,10 @@
 .toggle-hamburger span {
     display: block;
     position: absolute;
-    top: 44px;
+    top: 30px;
     left: 18px;
     right: 18px;
-    height: 5px;
+    height: 4px;
     background: $second-color;
 }
 
@@ -64,7 +64,7 @@
     display: block;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 4px;
     background-color: $second-color;
     z-index: 10;
     
